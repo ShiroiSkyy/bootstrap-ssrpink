@@ -52,8 +52,8 @@ function loadtheme(themeload){
 			break;
 	}
 	removeClass(getCookie("themeurl"))
-	loadStyle("/luci-static/ssrpink/ssrplusui-"+themeload+".css?v=shiroisky-v"+Version);
-	setCookie("themeurl","/luci-static/ssrpink/ssrplusui-"+themeload+".css?v=shiroisky-v"+Version);
+	loadStyle("/luci-static/bootstrap-ssrpink/ssrplusui-"+themeload+".css?v=shiroisky-v"+Version);
+	setCookie("themeurl","/luci-static/bootstrap-ssrpink/ssrplusui-"+themeload+".css?v=shiroisky-v"+Version);
 	setCookie("theme",themeload);
 }
 var str=window.location.href;
