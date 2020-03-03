@@ -1,4 +1,4 @@
-var Version=1.0;
+var Version=1.1;
 
 /* Cookie函数 */
 function setCookie(name,value){

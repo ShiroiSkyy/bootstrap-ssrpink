@@ -9,8 +9,8 @@ include $(TOPDIR)/rules.mk
 LUCI_TITLE:=Bootstrap_SSRPink Theme
 LUCI_DEPENDS:=
 
-PKG_VERSION:=1.0
-PKG_RELEASE:=20200303
+PKG_VERSION:=1.1
+PKG_RELEASE:=20200304
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
