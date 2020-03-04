@@ -1,4 +1,3 @@
-/* Version: 1.0 */
 body{
 	background-image: radial-gradient(rgba(60,59,82,1.00) 0%, rgba(37,34,51,1.00) 80%) !important;
 }
@@ -6,7 +5,6 @@ body{
 #maincontent{
     background-color: rgba(0, 0, 0, 0.35) !important;
 	border-radius: 10px 10px 0 0 !important;
-	overflow: hidden !important;
 	user-select: none !important;
 }
 #maincontent>ul:hover{
@@ -41,17 +39,27 @@ body{
 	border-radius: 5px !important;
 }
 .switch_theme{
+    width: 28px;
     cursor: pointer !important;
     border-radius: 10px !important;
     padding: 0px 10px !important;
-    background-color: hsla(0, 0%, 30%, 1) !important;
+    background-color: hsla(0, 0%, 20%, 1) !important;
     font-size: 12px !important;
     margin: 5px 10px 5px 5px !important;
-    color: hsla(0, 0%, 80%, 1) !important;
+    color: hsla(0, 0%, 75%, 1) !important;
     float: right !important;
     line-height: 34px !important;
     display: inline-block !important;
-	transition: all 0.2s;
+    transition: all 0.2s !important;
+}
+.switch_theme:after{
+	content: "?";
+    cursor: help;
+    position: absolute;
+    margin-left: 2px;
+    font-size: 10px;
+    line-height: 20px;
+    float: right;
 }
 .switch_theme:hover{
     background-color: hsla(0, 0%, 40%, 1) !important;
@@ -62,6 +70,7 @@ body{
 
 /* h2 ssrtitle */
 h2[name=content]{
+	height: 35.5px !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
@@ -73,7 +82,7 @@ h2[name=content]{
     color: rgba(151,151,151,1.00) !important;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 1) !important;
 	transition: all 0.5s !important;
-	animation: ssrtitle 1 4s !important;
+	animation: ssrtitle 1 1s !important;
 }
 h2[name=content]:hover{
 	letter-spacing: 1px !important; 
@@ -82,9 +91,9 @@ h2[name=content]:hover{
 	text-shadow: 0px 0px 10px rgba(0, 0, 0, 1) !important;
 }
 @keyframes ssrtitle{
-	0%{text-shadow: 0px 0px 0px rgba(0, 0, 0, 1) ;opacity: 0;}
+	0%{height: 0px;text-shadow: 0px 0px 0px rgba(0, 0, 0, 1) ;opacity: 0;}
 	70%{text-shadow: 0px 0px 10px rgba(0, 0, 0, 1) ;color: hsla(300,70%,80%,1.00) ;opacity: 1;}
-	to{text-shadow: 0px 0px 5px rgba(0, 0, 0, 1) ;color: rgba(151,151,151,1.00) ;opacity: 1;}
+	to{height: 35.5px;text-shadow: 0px 0px 5px rgba(0, 0, 0, 1) ;color: rgba(151,151,151,1.00) ;opacity: 1;}
 }
 
 /* em ssrstatus */
@@ -247,6 +256,9 @@ textarea[readonly]{
 .cbi-value>div{
 	color: rgba(255, 255, 255, 0.5) !important;
 }
+.cbi-value-field>div[data-index]{
+	text-align: center !important;
+}
 
 @media screen and (min-width: 600px){
 	.cbi-section>legend{
@@ -267,6 +279,10 @@ textarea[readonly]{
 	}
 	.cbi-section-node{
 		padding: 0 10% !important;
+	}
+	#cbi-shadowsocksr-servers>.cbi-section-node{
+		min-width: 600px !important;
+    	background-color: rgba(0, 0, 0, 1) !important;
 	}
 	.cbi-value-title {
 		background: hsla(0,0%,0%,0) !important;

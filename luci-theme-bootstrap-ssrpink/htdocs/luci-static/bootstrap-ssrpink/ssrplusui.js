@@ -1,4 +1,4 @@
-var Version=1.1;
+var Version=1.11;
 
 /* Cookie函数 */
 function setCookie(name,value){
@@ -37,8 +37,7 @@ function loadStyle(url){
 	ssrplusui.rel = 'stylesheet';
 	ssrplusui.type = 'text/css';
 	ssrplusui.href = url;
-	var head = document.getElementsByTagName('head')[0];
-	head.appendChild(ssrplusui);
+	document.getElementsByTagName('head')[0].appendChild(ssrplusui);
 }
 /* 切换主题函数 */
 function loadtheme(themeload){
@@ -56,6 +55,7 @@ function loadtheme(themeload){
 	setCookie("themeurl","/luci-static/bootstrap-ssrpink/ssrplusui-"+themeload+".css?v=shiroisky-v"+Version);
 	setCookie("theme",themeload);
 }
+
 var str=window.location.href;
 var verification=new RegExp("/services/shadowsocksr");
 var verification_result=verification.test(str);
@@ -73,6 +73,7 @@ if(verification_result==true){
 		switch_theme.classList.add('switch_theme');
 		var theme_text=document.createTextNode('切换');
 		switch_theme.appendChild(theme_text);
+		switch_theme.title="如果切换异常，请尝试清除浏览器Cookie！";
 		tabs.appendChild(switch_theme);
 		switch_theme=document.querySelector('.switch_theme');
 		switch_theme.onclick=function(){
