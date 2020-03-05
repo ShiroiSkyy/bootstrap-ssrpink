@@ -1,7 +1,5 @@
 body{
-	transition: all 0s !important;
 	background-color: hsla(251, 20%, 15%, 1) !important;
-	background-image: none;
 }
 
 #maincontent{
@@ -15,7 +13,7 @@ body{
 }
 /* ssr_select_top */
 #maincontent>ul{
-	transition: all 0.5s !important;
+	transition: all 0.2s !important;
 	margin: 5px 5px 10px 5px !important;
 	border-bottom: solid 2px rgb(151, 151, 151) !important;
     border-radius: 5px !important;

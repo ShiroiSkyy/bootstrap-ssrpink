@@ -8,7 +8,7 @@ body{
 }
 /* ssr_select_top */
 #maincontent>ul{
-	transition: all 0.5s !important;
+	transition: all 0.2s !important;
 	margin: 5px 5px 10px 5px !important;
 	border-bottom: solid 2px rgb(151, 151, 151) !important;
     border-radius: 5px !important;
