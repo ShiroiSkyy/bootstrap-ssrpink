@@ -1,7 +1,10 @@
 #!/bin/sh
-uci batch <<-EOF
-	set luci.themes.Bootstrap_SSRPink=/luci-static/bootstrap-ssrpink
-	set luci.main.mediaurlbase=/luci-static/bootstrap-ssrpink
-	commit luci
-EOF
+if [ "$PKG_UPGRADE" != 1 ]; then
+	uci batch <<-EOF
+		set luci.themes.Bootstrap_SSRPink=/luci-static/bootstrap-ssrpink
+		set luci.main.mediaurlbase=/luci-static/bootstrap-ssrpink
+		commit luci
+	EOF
+fi
+
 exit 0

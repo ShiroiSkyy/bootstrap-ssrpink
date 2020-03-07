@@ -36,7 +36,7 @@ function loadTheme(themeload){
 }
 
 var str=window.location.href;
-var verification=new RegExp("/services/shadowsocksr");
+var verification=new RegExp("/shadowsocksr");
 var verification_result=verification.test(str);
 var oldtheme=getCookie("theme");
 if(verification_result==true){
